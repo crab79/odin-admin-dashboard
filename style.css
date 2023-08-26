@@ -7,9 +7,11 @@
 
 body{
     display: grid;
-    min-height: 100vh;
     grid-template-columns: 1.2fr 5fr;
-    height: max-content;
+    height: 100vh;
+}
+
+html{
 }
 
 .sidebar{
@@ -20,10 +22,13 @@ body{
     gap: 3rem;
     position: relative;
     z-index: 10;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .right-part{
-    height: max-content;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .sidebar h1{
@@ -72,7 +77,7 @@ body{
     z-index: 10;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     min-height: 20vh;
-    height: max-content;
+    height: 20vh;
 }
 
 .search-area{
@@ -166,7 +171,7 @@ body{
     background-color: whitesmoke;
     padding: 2rem;
     gap: 1.5rem;
-    height: max-content;
+    height: 80vh;
     
 }
 
@@ -188,7 +193,7 @@ body{
           [fourth-row-start]"card card" 1fr[fourth-row-end]
           / 1fr 1fr;
     gap: 1.5rem;
-    height: 70%;
+    height: 75vh;
 }
 
 .projects h1{
@@ -198,11 +203,9 @@ body{
 .card{
     display: flex;
     flex-wrap: wrap;
-    justify-items: right;
     background-color: rgb(195, 237, 192);
     border-radius: 10px;
     padding: 1.5rem;
-    gap: 1rem;
     border-left-width: 15px;
     border-left-style: solid;
     border-left-color: rgb(253, 255, 174);
@@ -221,31 +224,39 @@ body{
     margin-right: 3rem;
 }
 
+.card p{
+    overflow: scroll;
+    height: 5rem;
+}
+
 .board-right-part{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 46% 46%;
+    height: 80vh;
+    gap: 1rem;
 }
 
 .announcements{
     display: grid;
-    grid: [first-row-start] "title title" 2rem[first-row-end]
-          [second-row-start]"content" 1fr[second-row-end]
-          [third-row-start] "content" 1fr[third-row-end]
-          [fourth-row-start]"content" 1fr[fourth-row-end]
-          / 1fr;
+    grid-template-rows: 2rem 90%;
     gap: 1.5rem;
-    padding: 2rem;
-    padding-top: 0px;
-    width: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: auto;
 }
 
 .contents{
     display: grid;
-    grid-template-rows: 1fr 1px 1fr 1px 1fr;
+    grid-template-rows: 8vh 1px 8vh 1px 8vh;
     gap: 1rem;
     background-color: rgb(195, 237, 192);
     padding: 2rem;
     border-radius: 10px;
+    height: auto;
+}
+
+.content{
+    overflow: scroll;
 }
 
 .content h1{
@@ -259,23 +270,27 @@ body{
 
 .trending{
     display: grid;
-    grid-template-rows: 2rem 1fr;
+    grid-template-rows: 2rem auto;
     gap: 1.5rem;
-    padding: 2rem;
-    padding-top: 0;
-    height: max-content;
+    padding: 1rem;
+    padding-bottom: 2rem;
     width: auto;
     border-radius: 10px;
+    height: 105%;
+   
 }
 
 .users{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     background-color: rgb(195, 237, 192);
-    padding: 2rem;
+    padding:2rem;
     border-radius: 10px;
     place-content: center;
+    overflow: auto;
+    height: 103%;
 }
 
 .otherUser{
